@@ -10,6 +10,7 @@ const User = ({
   completedMeetings,
   rate,
   onDelete,
+  onToggleBookMark,
 }) => {
   return (
     <tr key={_id}>
@@ -23,7 +24,7 @@ const User = ({
       <td>{completedMeetings}</td>
       <td>{rate}</td>
       <td>
-        <BookMark onclick={() => onToggleBookMark(_id)} />
+        <BookMark status={user.status} onclick={() => onToggleBookMark(_id)} />
       </td>
       <td>
         <button className="badge bg-danger" onClick={() => onDelete(_id)}>

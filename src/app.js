@@ -23,7 +23,7 @@ function App() {
       <main>
         <SearchStatus length={users.length} />
         <Users
-          user={user}
+          users={users}
           onDelete={handleDelete}
           onToggleBookMark={handleToggleBookMark}
         />
