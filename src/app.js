@@ -13,6 +13,7 @@ function App() {
       users.map((user) => {
         if (user._id === id) {
           user.status = !user.status;
+          return user;
         }
         return user;
       })
