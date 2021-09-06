@@ -1,9 +1,9 @@
 import React from "react";
 
-const BookMark = ({ status, ...rest }) => {
+const BookMark = ({ status, onToggleBookMark, id }) => {
   return (
     <i
-      {...rest}
+      onClick={() => onToggleBookMark(id)}
       className={`bi bi-bookmark${status === true ? "-fill" : ""}`}
     ></i>
   );
